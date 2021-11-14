@@ -57,6 +57,12 @@ app.post('/vote', function(req, res) {
             res.json({status: "idea does not exist"});
             return;
         }
+    } else {
+        const res_code = 400;
+        serverlog(req, res_code);
+        res.status(res_code);
+        res.json({status: "missing idea"});
+        return;
     }
 
     const res_code = 200;
