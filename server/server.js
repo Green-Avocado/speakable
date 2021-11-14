@@ -40,7 +40,7 @@ app.post('/create', function(req, res) {
     };
 
     for (let field in conference) {
-        if (conference[field] === null) {
+        if (conference[field] == null) {
             const res_code = 400;
             serverlog(req, res_code);
             res.status(res_code);
@@ -64,7 +64,7 @@ app.post('/create', function(req, res) {
 app.post('join', function(req, res) {
     id = req.body.id;
 
-    if (conferences[id] === null) {
+    if (conferences[id] == null) {
         const res_code = 400;
         serverlog(req, res_code);
         res.status(res_code);
@@ -80,8 +80,12 @@ app.post('join', function(req, res) {
 app.get('/conference/:conference', function(req, res) {
     id = req.params.conference;
 
-    if (conferences[id] === null) {
-        next();
+    if (conferences[id] == null) {
+        const res_code = 400;
+        serverlog(req, res_code);
+        res.status(res_code);
+        res.json({error: "conference does not exist"});
+        return;
     }
 
     topics = conferences[id].topics;
@@ -89,13 +93,13 @@ app.get('/conference/:conference', function(req, res) {
     const res_code = 200;
     serverlog(req, res_code);
     res.status(res_code);
-    res.sendFile('./pages/conference.html');
+    res.sendFile('conference.html', { root: __dirname + '/pages/' });
 });
 
 app.post('/conference/:conference/topic', function(req, res) {
     id = req.params.conference;
 
-    if (conferences[id] === null) {
+    if (conferences[id] == null) {
         const res_code = 400;
         serverlog(req, res_code);
         res.status(res_code);
@@ -113,7 +117,7 @@ app.post('/conference/:conference/topic', function(req, res) {
     };
 
     for (let field in topic) {
-        if (topic[field] === null) {
+        if (topic[field] == null) {
             const res_code = 400;
             serverlog(req, res_code);
             res.status(res_code);
@@ -133,7 +137,7 @@ app.post('/conference/:conference/vote', function(req, res) {
     id = req.params.conference;
     idea = req.body.idea;
 
-    if (conferences[conference] === null) {
+    if (conferences[conference] == null) {
         const res_code = 400;
         serverlog(req, res_code);
         res.status(res_code);
@@ -143,7 +147,7 @@ app.post('/conference/:conference/vote', function(req, res) {
 
     topics = conferences[id].topics;
 
-    if (idea === null) {
+    if (idea == null) {
         const res_code = 400;
         serverlog(req, res_code);
         res.status(res_code);
@@ -170,7 +174,7 @@ app.post('/conference/:conference/vote', function(req, res) {
 app.get('/conference/:conference/info', function(req, res) {
     id = req.params.conference;
 
-    if (conferences[id] === null) {
+    if (conferences[id] == null) {
         const res_code = 400;
         serverlog(req, res_code);
         res.status(res_code);
@@ -187,7 +191,7 @@ app.get('/conference/:conference/info', function(req, res) {
 app.get('/conference/:conference/topics', function(req, res) {
     id = req.body.conference;
 
-    if (conferences[id] === null) {
+    if (conferences[id] == null) {
         const res_code = 400;
         serverlog(req, res_code);
         res.status(res_code);
@@ -203,7 +207,7 @@ app.get('/conference/:conference/topics', function(req, res) {
     res.json(topics);
 });
 
-app.use(express.static('../public'));
+app.use(express.static(__dirname + '/../public'));
 
 app.use('*', function(req, res) {
     const res_code = 404;
@@ -213,7 +217,7 @@ app.use('*', function(req, res) {
     res.status(res_code);
 
     if(req.accepts('html')) {
-        res.sendFile('404.html', { root: __dirname + '/../public/'});
+        res.sendFile('404.html', { root: __dirname + '/../public/' });
         return;
     }
 
