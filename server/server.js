@@ -78,7 +78,7 @@ app.get('/submissions', function(req, res) {
     res.json(submissions);
 });
 
-app.get('/', express.static(__dirname + '/../public'));
+app.use(express.static('../public'));
 
 app.use('*', function(req, res) {
     const res_code = 404;
