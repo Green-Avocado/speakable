@@ -39,10 +39,9 @@ app.post('/submit', function(req, res) {
 
     submissions.push(form);
 
-    const res_code = 200;
+    const res_code = 302;
     serverlog(req, res_code);
-    res.status(res_code);
-    res.json({message: "ok"});
+    res.redirect('/');
 });
 
 app.post('/vote', function(req, res) {
