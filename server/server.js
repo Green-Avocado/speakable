@@ -61,7 +61,7 @@ app.post('/create', function(req, res) {
     res.redirect('/conference/' + id);
 });
 
-app.get('join', function(req, res) {
+app.post('join', function(req, res) {
     id = req.body.id;
 
     if (conferences[id] === null) {
@@ -75,6 +75,21 @@ app.get('join', function(req, res) {
     const res_code = 302;
     serverlog(req, res_code);
     res.redirect('/conference/' + id);
+});
+
+app.get('/conference/:conference', function(req, res) {
+    id = req.params.conference;
+
+    if (conferences[id] === null) {
+        next();
+    }
+
+    topics = conferences[id].topics;
+
+    const res_code = 200;
+    serverlog(req, res_code);
+    res.status(res_code);
+    res.sendFile('./pages/conference.html');
 });
 
 app.post('/conference/:conference/topic', function(req, res) {
@@ -150,21 +165,6 @@ app.post('/conference/:conference/vote', function(req, res) {
     serverlog(req, res_code);
     res.status(res_code);
     res.json({message: "ok"});
-});
-
-app.get('/conference/:conference', function(req, res) {
-    id = req.params.conference;
-
-    if (conferences[id] === null) {
-        next();
-    }
-
-    topics = conferences[id].topics;
-
-    const res_code = 200;
-    serverlog(req, res_code);
-    res.status(res_code);
-    res.json(topics);
 });
 
 app.get('/conference/:conference/info', function(req, res) {

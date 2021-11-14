@@ -1,5 +1,13 @@
-async function getSubmissions() {
-    data = await fetch("/submissions").then((res) => {
+async function getInfo() {
+    data = await fetch("info").then((res) => {
+        return res.json();
+    });
+
+    return data;
+}
+
+async function getTopics() {
+    data = await fetch("topics").then((res) => {
         return res.json();
     });
 
@@ -7,7 +15,7 @@ async function getSubmissions() {
 }
 
 async function vote(index) {
-    response = await fetch("/vote", {
+    response = await fetch("vote", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
