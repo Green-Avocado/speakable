@@ -16,7 +16,7 @@ function serverlog(req, code) {
 
 const submissions = [];
 
-app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.post('/submit', function(req, res) {
     form = {
