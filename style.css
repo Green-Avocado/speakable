@@ -1,180 +1,55 @@
-* {
+*{
     box-sizing: border-box;
-  }
-  body {
-    font-size: 14px;
-  }
-  .v4_9 {
-    width: 100%;
-    height: 912px;
-    background: rgba(255,255,255,1);
-    opacity: 1;
-    position: relative;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-  }
-  .v2_47 {
-    width: 100%;
-    height: 1025px;
-    background: url("../images/v2_47.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 38px;
-    left: 17px;
-    overflow: hidden;
-  }
-  .v2_72 {
-    width: 100%;
-    height: 990px;
-    background: rgba(227,178,137,1);
-    opacity: 1;
-    position: absolute;
-    top: 35px;
-    left: 1px;
-  }
-  .v2_73 {
-    width: 100%;
-    height: 990px;
-    background: rgba(255,241,226,1);
-    opacity: 1;
-    position: absolute;
-    top: 30px;
-    left: 0px;
-  }
-  .v4_34 {
-    width: 609px;
-    height: 254px;
-    background: rgba(198,122,33,1);
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 400px;
-    border-top-left-radius: 14px;
-    border-top-right-radius: 14px;
-    border-bottom-left-radius: 14px;
-    border-bottom-right-radius: 14px;
-    overflow: hidden;
-  }
-  .v4_22 {
-    width: 609px;
-    height: 213px;
-    background: rgba(254,200,154,1);
-    opacity: 1;
-    position: absolute;
-    top: 38px;
-    left: 397px;
-    border-top-left-radius: 14px;
-    border-top-right-radius: 14px;
-    border-bottom-left-radius: 14px;
-    border-bottom-right-radius: 14px;
-    overflow: hidden;
-  }
-  .v4_23 {
-    width: 520px;
-    color: rgba(31,31,31,1);
-    position: absolute;
-    top: 20px;
-    left: 44px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
+}
+@font-face {
     font-family: HammersmithOne;
-    font-weight: Regular;
-    font-size: 96px;
-    opacity: 1;
-    text-align: left;
-  }
-  .v4_31 {
-    width: 564px;
-    color: rgba(0,0,0,1);
-    position: absolute;
-    top: 121px;
-    left: 22px;
-    font-family: Archivo Narrow;
-    font-weight: Italic;
-    font-size: 48px;
-    opacity: 1;
-    text-align: center;
-  }
-  .v2_46 {
-    width: 77px;
-    height: 148px;
-    background: url("../images/v2_46.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 31px;
-    overflow: hidden;
-  }
-  .v2_43 {
-    width: 49px;
-    color: rgba(0,0,0,1);
-    position: relative;
-    top: 0px;
-    left: 0px;
+    src: url(HammersmithOne-Regular.ttf);
     font-family: Alatsi;
-    font-weight: Regular;
-    font-size: 96px;
-    opacity: 1;
-    text-align: left;
-  }
-  .v2_44 {
-    width: 55px;
-    color: rgba(0,0,0,1);
+    src: url(Alatsi-Regular.ttf);
+}
+body{
+     font-family: HammersmithOne, sans-serif;
+}
+
+/* Navigation */
+
+.nav-container{
+
+    /* Bar */
     position: absolute;
-    top: 25px;
-    left: 22px;
-    font-family: Alatsi;
-    font-weight: Regular;
-    font-size: 96px;
-    opacity: 1;
-    text-align: left;
-  }
-  .name {
-    color: #fff;
-  }
-  .v4_39 {
-    width: 372px;
-    height: 77px;
-    background: rgba(255,226,193,1);
-    opacity: 1;
-    position: absolute;
-    top: 795px;
-    left: 608px;
-    border-top-left-radius: 14px;
-    border-top-right-radius: 14px;
-    border-bottom-left-radius: 14px;
-    border-bottom-right-radius: 14px;
-    overflow: hidden;
-  }
-  .v4_40 {
-    width: 381px;
-    color: rgba(0,0,0,1);
-    position: absolute;
-    top: 19px;
-    left: 8px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: HammersmithOne;
-    font-weight: Regular;
-    font-size: 36px;
-    opacity: 1;
-    text-align: center;
-  }
-  .v3_14 {
-    width: 565px;
-    color: rgba(0,0,0,1);
-    position: absolute;
-    top: 320px;
-    left: 90px;
-    font-family: HammersmithOne;
-    font-weight: Regular;
-    font-size: 24px;
-    opacity: 1;
-    text-align: left;
-  }
-  
+    width: 100%;
+    height: 72px;
+    left: 0px;
+    top: 0px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.25);
+}
+
+.wrapper{
+    max-width:1368px;
+    margin: 0 auto;
+}
+
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+nav ul{
+    display: flex;
+    align-items: flex-end;
+}
+
+.logo{
+    
+}
+
+.nav-items li{
+    list-style: none;
+    margin-right: 100px;
+    
+}
