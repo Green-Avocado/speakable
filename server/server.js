@@ -20,10 +20,9 @@ app.use(express.json());
 
 app.post('/submit', function(req, res) {
     form = {
-        title: req.body.title,
-        description: req.body.description,
-        bio: req.body.bio,
-        length: req.body.length,
+        themes: req.body.themes,
+        rooms: req.body.rooms,
+        time: req.body.time,
         votes: 0,
     }
 
