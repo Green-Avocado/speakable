@@ -92,6 +92,8 @@ app.post('/conference/:conference/topic', function(req, res) {
 
     topic = {
         topic: req.body.topic,
+        name: req.body.name,
+        bio: req.body.bio,
         votes: 0,
     };
 
