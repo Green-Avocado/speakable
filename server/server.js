@@ -16,6 +16,7 @@ function serverlog(req, code) {
 
 const submissions = [];
 
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.post('/submit', function(req, res) {
@@ -47,21 +48,21 @@ app.post('/submit', function(req, res) {
 app.post('/vote', function(req, res) {
     idea = req.body.idea;
 
-    if (idea) {
-        if (submissions[idea]) {
-            submissions[idea].votes += 1;
-        } else {
-            const res_code = 400;
-            serverlog(req, res_code);
-            res.status(res_code);
-            res.json({error: "idea does not exist"});
-            return;
-        }
-    } else {
+    if (idea == null) {
         const res_code = 400;
         serverlog(req, res_code);
         res.status(res_code);
         res.json({error: "missing idea"});
+        return;
+    }
+
+    if (submissions[idea]) {
+        submissions[idea].votes += 1;
+    } else {
+        const res_code = 400;
+        serverlog(req, res_code);
+        res.status(res_code);
+        res.json({error: "idea does not exist"});
         return;
     }
 
