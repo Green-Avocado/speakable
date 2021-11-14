@@ -31,7 +31,7 @@ app.post('/submit', function(req, res) {
             const res_code = 400;
             serverlog(req, res_code);
             res.status(res_code);
-            res.json({status: "bad form data"});
+            res.json({error: "bad form data"});
             return;
         }
     }
@@ -41,7 +41,7 @@ app.post('/submit', function(req, res) {
     const res_code = 200;
     serverlog(req, res_code);
     res.status(res_code);
-    res.json({status: "ok"});
+    res.json({message: "ok"});
 });
 
 app.post('/vote', function(req, res) {
@@ -54,21 +54,21 @@ app.post('/vote', function(req, res) {
             const res_code = 400;
             serverlog(req, res_code);
             res.status(res_code);
-            res.json({status: "idea does not exist"});
+            res.json({error: "idea does not exist"});
             return;
         }
     } else {
         const res_code = 400;
         serverlog(req, res_code);
         res.status(res_code);
-        res.json({status: "missing idea"});
+        res.json({error: "missing idea"});
         return;
     }
 
     const res_code = 200;
     serverlog(req, res_code);
     res.status(res_code);
-    res.json({status: "ok"});
+    res.json({message: "ok"});
 });
 
 app.get('/submissions', function(req, res) {
