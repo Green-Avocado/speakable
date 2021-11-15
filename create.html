@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an unconference</title>
+    <link rel = "stylesheet" href="stylecreate.css"/>
+</head>
+<body>
+    
+    <div class="nav-container">
+        <div class="wrapper">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="Images/logo.svg" alt="Logo" href="index.html">
+                    </a>
+                </div>
+
+                <ul class="nav-items">
+                    <li>
+                        <a href="aboutpage.html">About</a>
+                    </li>
+                    <li>
+                        <a href="create.html">Create</a>
+                    </li>
+                    <li>
+                        <a href="#">Join</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <h1>Create an unconference</h1> 
+    <p>
+        Please give us more information on how your unconference will run!
+    </p>
+    <div class="form">
+        <form action="/create" method="post">
+            <label for="conference_name">Name of unconference:</label>
+            <br>
+            <input type="text" id="conference_name" name="name" placeholder="Ex. Hackathon"></input>
+            <br>
+            <label for="theme">Theme being presented:</label>
+            <br>
+            <input type="text" id="theme" name="theme" placeholder="Ex. Coding"></input>
+            <br>
+            <label for="room_num">Number of rooms needed:</label>
+            <br>
+            <input type="text" id="room_num" name="rooms" placeholder="Ex. 3"></input>
+            <br>
+            <label for="time">Time allocated for each room:</label>
+            <br>
+            <input type="text" id="time" name="time" placeholder="Ex. 30 min"></input>
+            <br>
+            <!-- <input type="submit" value="submit"> -->
+            <button type="submit" value="submit">Create</button>
+        </form>
+    </div>
+    <script src = "main.js"> </script> 
+</body>
+</html>
