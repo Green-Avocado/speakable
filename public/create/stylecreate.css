@@ -4,9 +4,9 @@
 }
 @font-face {
     font-family: HammersmithOne;
-    src: url(HammersmithOne-Regular.ttf);
+    src: url(/fonts/HammersmithOne-Regular.ttf);
     font-family: Alatsi;
-    src: url(Alatsi-Regular.ttf);
+    src: url(/fonts/Alatsi-Regular.ttf);
 }
 
 body {
@@ -48,12 +48,12 @@ nav ul{
 }
 
 /* .logo{
-    
+
 } */
 
 .nav-items li{
     list-style: none;
-    margin-right: 100px;    
+    margin-right: 100px;
 }
 
 .nav-items li:nth-last-of-type(1){
@@ -75,16 +75,16 @@ h1 {
     height: 50px;
     left: 10%;
     top: 100px;
-  
+
     font-family: sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 45px;
     line-height: 120px;
-  
+
     margin-bottom: 24px;
-  
-    color: #202020; 
+
+    color: #202020;
 }
 
 .form {

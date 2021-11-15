@@ -4,9 +4,9 @@
 }
 @font-face {
   font-family: HammersmithOne;
-  src: url(HammersmithOne-Regular.ttf);
+  src: url(/fonts/HammersmithOne-Regular.ttf);
   font-family: Alatsi;
-  src: url(Alatsi-Regular.ttf);
+  src: url(/fonts/Alatsi-Regular.ttf);
 }
 body {
   font-family: HammersmithOne, sans-serif;
@@ -63,13 +63,13 @@ nav ul {
 
 /* Header */
 .header-container {
-  background: #fef4e8 url("../Images/Background-Shape.svg"); 
+  background: #fef4e8 url("../Images/Background-Shape.svg");
   background-repeat: no-repeat;
   background-position: 100%;
   background-size: contain;
   height: calc(100vh - 72px);
   display: flex;
-  align-items: center; 
+  align-items: center;
     }
 
 
