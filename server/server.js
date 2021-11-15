@@ -61,7 +61,7 @@ app.post('/create', function(req, res) {
 
     const res_code = 302;
     serverlog(req, res_code);
-    res.redirect('/conference/' + id);
+    res.redirect('/conference/' + id + '/view');
 });
 
 app.post('/join', function(req, res) {
@@ -77,10 +77,10 @@ app.post('/join', function(req, res) {
 
     const res_code = 302;
     serverlog(req, res_code);
-    res.redirect('/conference/' + id);
+    res.redirect('/conference/' + id + '/view');
 });
 
-app.get('/conference/:conference', function(req, res) {
+app.get('/conference/:conference/view', function(req, res) {
     id = req.params.conference;
 
     if (conferences[id] == null) {

@@ -8,7 +8,7 @@
     <link rel = "stylesheet" href="styletopic.css"/>
 </head>
 <body>
-    
+
     <div class="nav-container">
         <div class="wrapper">
             <nav>
@@ -35,25 +35,25 @@
 
     <div class="container">
         <div class="createtopic">
-            <h2>Create an Unconference</h2> 
+            <h2>Create an Unconference</h2>
             <p>
-                Interested in a topic that has not been listed? Be a speaker! 
+                Interested in a topic that has not been listed? Be a speaker!
             </p>
         </div>
-    
-        <div class="createtopicform"> 
-            <form action="/createtopic" method="post">
+
+        <div class="createtopicform">
+            <form action="./topic" method="post">
                 <label for="topic_name">Topic:</label>
                 <br>
-                <input type="text" id="topic_name" name="topic_name" placeholder="Ex. Fun topic"></input>
+                <input type="text" id="topic_name" name="topic" placeholder="Ex. Fun topic"></input>
                 <br>
                 <label for="speaker_name">Speaker name:</label>
                 <br>
-                <input type="text" id="speaker_name" name="speaker_name" placeholder="Ex. John Smith"></input>
+                <input type="text" id="speaker_name" name="name" placeholder="Ex. John Smith"></input>
                 <br>
                 <label for="speaker_bio">Speaker bio:</label>
                 <br>
-                <input type="text" id="speaker_bio" name="speaker_bio" placeholder="Ex. Professor at UBC"></input>
+                <input type="text" id="speaker_bio" name="bio" placeholder="Ex. Professor at UBC"></input>
                 <br>
                 <button type="submit" value="submit">Create</button>
             </form>
@@ -61,10 +61,10 @@
         <div class="votetopic">
             <h2 class = "topicHead">Vote for a topic</h2>
             <!--<p class = "topicP">
-                Show how in demand a topic is by voting! Click a topic to decide how many stamps to give it.  
+                Show how in demand a topic is by voting! Click a topic to decide how many stamps to give it.
             </p> -->
         </div>
     </div>
-    <script src = "main.js"> </script> 
+    <script src = "main.js"> </script>
 </body>
 </html>
