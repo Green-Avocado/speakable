@@ -51,7 +51,7 @@ app.post('/create', function(req, res) {
 
     let id;
     do {
-        id = makeid(8);
+        id = makeid(6);
     } while (conferences[id] != null);
 
     conferences[id] = conference;
