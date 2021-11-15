@@ -3,7 +3,9 @@ async function getInfo() {
         return res.json();
     });
 
-    return data;
+    title = document.getElementById("title")
+
+    title.innerHTML = `${data.name} (${data.themes})`;
 }
 
 async function getTopics() {
@@ -49,4 +51,5 @@ async function vote(index) {
 
 window.onload = function() {
     getTopics();
+    getInfo();
 }
