@@ -39,7 +39,7 @@ app.post('/create', function(req, res) {
         themes: req.body.themes,
         rooms: req.body.rooms,
         time: req.body.time,
-        submissions: [],
+        topics: [],
     };
 
     for (let field in conference) {
@@ -133,14 +133,14 @@ app.post('/conference/:conference/topic', function(req, res) {
 
     const res_code = 302;
     serverlog(req, res_code);
-    res.redirect('/conference/' + id);
+    res.redirect('/conference/' + id + '/view');
 });
 
 app.post('/conference/:conference/vote', function(req, res) {
     id = req.params.conference;
     idea = req.body.idea;
 
-    if (conferences[conference] == null) {
+    if (conferences[id] == null) {
         const res_code = 400;
         serverlog(req, res_code);
         res.status(res_code);
@@ -192,7 +192,7 @@ app.get('/conference/:conference/info', function(req, res) {
 });
 
 app.get('/conference/:conference/topics', function(req, res) {
-    id = req.body.conference;
+    id = req.params.conference;
 
     if (conferences[id] == null) {
         const res_code = 400;

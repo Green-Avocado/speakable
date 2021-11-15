@@ -11,7 +11,19 @@ async function getTopics() {
         return res.json();
     });
 
-    return data;
+    list = document.getElementById("list");
+    console.log(data)
+
+    for (x in data) {
+        topic = data[x];
+        list.innerHTML += `
+        "${topic.topic}" by ${topic.name}
+        <br>
+        About me: ${topic.bio}
+        <br>
+        <br>
+        `;
+    }
 }
 
 async function vote(index) {
@@ -26,4 +38,8 @@ async function vote(index) {
     });
 
     return response;
+}
+
+window.onload = function() {
+    getTopics();
 }

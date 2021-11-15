@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Topics</title>
-    <link rel = "stylesheet" href="styletopic.css"/>
+    <link rel = "stylesheet" href="../styletopic.css"/>
 </head>
 <body>
 
@@ -14,19 +14,19 @@
             <nav>
                 <div class="logo">
                     <a href="../home/index.html">
-                        <img src="../Images/logo.svg" alt="Logo" href="../home/index.html">
+                        <img src="../../Images/logo.svg" alt="Logo" href="../../home/index.html">
                     </a>
                 </div>
 
                 <ul class="nav-items">
                     <li>
-                        <a href="../about/aboutpage.html">About</a>
+                        <a href="../../about/aboutpage.html">About</a>
                     </li>
                     <li>
-                        <a href="../create/create.html">Create</a>
+                        <a href="../../create/create.html">Create</a>
                     </li>
                     <li>
-                        <a href="../join/joinpage.html">Join</a>
+                        <a href="../../join/joinpage.html">Join</a>
                     </li>
                 </ul>
             </nav>
@@ -58,13 +58,12 @@
                 <button type="submit" value="submit">Create</button>
             </form>
         </div>
-        <div class="votetopic">
+        <div class="votetopic" id="aaa">
             <h2 class = "topicHead">Vote for a topic</h2>
-            <!--<p class = "topicP">
-                Show how in demand a topic is by voting! Click a topic to decide how many stamps to give it.
-            </p> -->
+            <p class = "topicP" id="list" style="width:500px">
+            </p>
         </div>
     </div>
-    <script src = "main.js"> </script>
+    <script src = "../topics.js"> </script>
 </body>
 </html>
