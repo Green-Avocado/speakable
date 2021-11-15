@@ -62,7 +62,7 @@ app.post('/create', function(req, res) {
 });
 
 app.post('join', function(req, res) {
-    id = req.body.id;
+    id = req.body.code;
 
     if (conferences[id] == null) {
         const res_code = 400;
