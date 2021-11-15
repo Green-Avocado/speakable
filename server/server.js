@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const express = require('express');
+const cookieParser = require('cookie-parser');
 
 const PORT = 5000;
 
@@ -29,7 +30,7 @@ const conferences = {};
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
+app.use(cookieParser());
 app.use(express.static(__dirname + '/../public'));
 
 app.post('/create', function(req, res) {
