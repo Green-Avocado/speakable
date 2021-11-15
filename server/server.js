@@ -30,6 +30,8 @@ const conferences = {};
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.use(express.static(__dirname + '/../public'));
+
 app.post('/create', function(req, res) {
     conference = {
         name: req.body.name,
@@ -206,8 +208,6 @@ app.get('/conference/:conference/topics', function(req, res) {
     res.status(res_code);
     res.json(topics);
 });
-
-app.use(express.static(__dirname + '/../public'));
 
 app.use('*', function(req, res) {
     const res_code = 404;
