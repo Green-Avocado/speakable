@@ -40,7 +40,7 @@ app.post('/create', function(req, res) {
     };
 
     for (let field in conference) {
-        if (conference[field] == null || conference[field]) {
+        if (conference[field] == null || conference[field] === "") {
             const res_code = 400;
             serverlog(req, res_code);
             res.status(res_code);
@@ -93,7 +93,7 @@ app.get('/conference/:conference', function(req, res) {
     const res_code = 200;
     serverlog(req, res_code);
     res.status(res_code);
-    res.sendFile('topicpage.html', { root: __dirname + '/../public/topic/' });
+    res.sendFile('topicpage.html', { root: __dirname + '/pages/' });
 });
 
 app.post('/conference/:conference/topic', function(req, res) {
