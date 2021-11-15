@@ -93,7 +93,7 @@ app.get('/conference/:conference', function(req, res) {
     const res_code = 200;
     serverlog(req, res_code);
     res.status(res_code);
-    res.sendFile('conference.html', { root: __dirname + '/pages/' });
+    res.sendFile('topicpage.html', { root: __dirname + '/../public/topic/' });
 });
 
 app.post('/conference/:conference/topic', function(req, res) {
