@@ -40,7 +40,7 @@ app.post('/create', function(req, res) {
     };
 
     for (let field in conference) {
-        if (conference[field] == null) {
+        if (conference[field] == null || conference[field]) {
             const res_code = 400;
             serverlog(req, res_code);
             res.status(res_code);
