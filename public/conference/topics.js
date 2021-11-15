@@ -14,6 +14,7 @@ async function getTopics() {
     list = document.getElementById("list");
     console.log(data)
 
+    let i = 0;
     for (x in data) {
         topic = data[x];
         list.innerHTML += `
@@ -21,8 +22,14 @@ async function getTopics() {
         <br>
         About me: ${topic.bio}
         <br>
+        votes: ${topic.votes}
+        <br>
+        <button type="submit">Vote</button>
+        <br>
         <br>
         `;
+
+        i++
     }
 }
 
