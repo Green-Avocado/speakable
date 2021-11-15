@@ -24,7 +24,7 @@ async function getTopics() {
         <br>
         votes: ${topic.votes}
         <br>
-        <button type="submit">Vote</button>
+        <button type="submit" onclick="vote(${i})">Vote</button>
         <br>
         <br>
         `;
@@ -44,7 +44,7 @@ async function vote(index) {
         return res.json();
     });
 
-    return response;
+     location.reload()
 }
 
 window.onload = function() {
