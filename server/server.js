@@ -61,7 +61,7 @@ app.post('/create', function(req, res) {
     res.redirect('/conference/' + id);
 });
 
-app.post('join', function(req, res) {
+app.post('/join', function(req, res) {
     id = req.body.code;
 
     if (conferences[id] == null) {
