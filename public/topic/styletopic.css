@@ -87,19 +87,19 @@ h2 {
     color: #202020; 
 }
 
-.votetopic {
+/* .votetopic {
     background-color: #FEC89A;
     border-radius: 25px;
     position: absolute;
     left: 65%;
-    /* padding: 20px;
-    margin: 20px 20px; */
+    padding: 20px;
+    margin: 20px 20px;
     font-family: HammersmithOne, sans-serif;
     font-size: 25px;
     margin: auto;
     color: #202020
 
-}
+} */
 
 input[type=text] {
     font-family: Alatsi, sans-serif;
@@ -143,7 +143,7 @@ button {
     color: white;
 }
 
-/* .container {
+.container {
     display: flex;
 }
 
@@ -153,4 +153,4 @@ button {
 
 .votetopic {
     flex: 1;
-} */
+}
