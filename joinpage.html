@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create an Unconference</title>
-    <link rel = "stylesheet" href="stylecreate.css"/>
+    <title>Join an Unconference</title>
+    <link rel = "stylesheet" href="stylejoin.css"/>
 </head>
 <body>
     
@@ -32,30 +32,19 @@
             </nav>
         </div>
     </div>
-    <h1>Create an Unconference</h1> 
+    <h1>Join an Unconference</h1> 
     <p>
-        Please give us more information on how your unconference will run!
+        Get a unique input code from the unconference organizer!     
     </p>
-    <div class="form">
-        <form action="/create" method="post">
-            <label for="conference_name">Name of unconference:</label>
+    <div class="joinform">
+        <form action="/join" method="post">
+
+            <label for="code">Code for unconference:</label>
             <br>
-            <input type="text" id="conference_name" name="name" placeholder="Ex. Hackathon"></input>
-            <br>
-            <label for="theme">Theme being presented:</label>
-            <br>
-            <input type="text" id="theme" name="theme" placeholder="Ex. Coding"></input>
-            <br>
-            <label for="room_num">Number of rooms needed:</label>
-            <br>
-            <input type="text" id="room_num" name="rooms" placeholder="Ex. 3"></input>
-            <br>
-            <label for="time">Time allocated for each room:</label>
-            <br>
-            <input type="text" id="time" name="time" placeholder="Ex. 30 min"></input>
+            <input type="text" id="code" name="code" placeholder="Ex. 123ABC"></input>
             <br>
             <!-- <input type="submit" value="submit"> -->
-            <button type="submit" value="submit">Create</button>
+            <button type="submit" value="submit">Join</button>
         </form>
     </div>
     <script src = "main.js"> </script> 

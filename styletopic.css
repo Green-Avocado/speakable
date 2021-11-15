@@ -10,11 +10,10 @@
 }
 
 body {
-    /* font-family: HammersmithOne, sans-serif; */
+    font-family: HammersmithOne, sans-serif;
     background-color: #FEF4E8;
-    padding-top: 72px;
+    padding-top: 100px;
 }
-
 
 /* Navigation */
 
@@ -48,6 +47,10 @@ nav ul{
     align-items: flex-end;
 }
 
+/* .logo{
+    
+} */
+
 .nav-items li{
     list-style: none;
     margin-right: 100px;    
@@ -58,15 +61,15 @@ nav ul{
 }
 
 .nav-items li a{
-    color: #000000;
+    color: #202020;
     font-family: Alatsi;
     font-size: 20px;
     text-decoration: none;
 }
 
-/* Hero Text */
+/*  */
 
-header h1 {
+h2 {
     position: absolute;
     width: 520px;
     height: 50px;
@@ -76,15 +79,50 @@ header h1 {
     font-family: sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 64px;
+    font-size: 35px;
     line-height: 120px;
   
     margin-bottom: 24px;
   
-    color: #202020;   
+    color: #202020; 
 }
 
-p{
+.createtopic {
+    background-color: #FEC89A;
+    border-radius: 25px;
+    position: absolute;
+    left: 65%;
+    padding: 20px;
+    margin: 20px 20px;
+    font-family: HammersmithOne, sans-serif;
+    font-size: 25px;
+    margin: auto;
+    color: #202020
+
+}
+
+input[type=text] {
+    font-family: Alatsi, sans-serif;
+    width: 20px 10px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #202020
+
+}
+
+input::placeholder {
+    font-family: HammersmithOne, sans-serif;
+}
+
+label {
+    font-family: Alatsi, sans-serif;
+}
+
+p {
     position: absolute;
     left: 10%;
     top: 200px;
@@ -96,7 +134,11 @@ p{
     margin-right: 20%;
 }
 
-.header-container{
-    background-color: #FFFFFF;
-    background-size: 200px 80%;
+button {
+    padding: 5px 10px;
+    font-family: HammersmithOne, sans-serif;
+    font-size: bold;
+    background-color: #BC6C25;
+    border-radius: 25px;
+    color: white;
 }
