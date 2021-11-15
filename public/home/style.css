@@ -63,7 +63,7 @@ nav ul {
 
 /* Header */
 .header-container {
-  background: #fef4e8 url("Images/Background-Shape.svg"); 
+  background: #fef4e8 url("../Images/Background-Shape.svg"); 
   background-repeat: no-repeat;
   background-position: 100%;
   background-size: contain;
