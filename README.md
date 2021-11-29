@@ -19,10 +19,10 @@ The back-end is node, express, and Javascript. See the [DevPost posting](https:/
 
 ### Contributions:
 
-Brian Ho: Overall front-end development, media design, graphics, video recording for the demo and active idea input.
+* Brian Ho: Overall front-end development, media design, graphics, video recording for the demo and active idea input.
 
-Hannah Yang: Overall front-end development, graphics and design. Was also active in idea making.
+* Hannah Yang: Overall front-end development, graphics and design. Was also active in idea making.
 
-Jason Ngo: Created back-end and API to create and manage rooms. Wrote JavaScript to allow users to interact with the API.
+* Jason Ngo: Created back-end and API to create and manage rooms. Wrote JavaScript to allow users to interact with the API.
 
-Jason Hall: Overall concept, media design, pitch, graphics.
+* Jason Hall: Overall concept, media design, pitch, graphics.
