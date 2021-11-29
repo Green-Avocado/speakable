@@ -10,7 +10,7 @@ Speak-able is a website that allows someone create a room for an unconference or
 ## Other information ##
 The design was created in Figma, then re-created with HTML/CSS, and Javascript. The back-end is node, express, and Javascript. See the [DevPost posting](https://devpost.com/software/speak-able-inclusive-unconferencing) for more details and a demo about this project. 
 
-**Contributions:** 
+### Contributions:
 
 Brian Ho: Overall front-end development, media design, graphics, video recording for the demo and active idea input.
 
